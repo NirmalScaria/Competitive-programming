@@ -1,5 +1,71 @@
 from typing import final
 import requests
+from requests.api import head
+from requests.structures import CaseInsensitiveDict
+import json
+
+def getCodechefResponse(contUrl):
+    creds=open('Configuration/codechefRequest.txt','r').read()
+    contestCode=contUrl.split('/')[-1]
+    print("Fetching Codechef Results")
+    credsl=creds.lower()
+    url = "https://www.codechef.com/api/rankings/"+contestCode+"?sortBy=rank&order=asc&page=189&itemsPerPage=25"
+    useragent=creds[credsl.find("user-agent")+12:credsl.find("'",credsl.find('user-agent')+13)]
+    cookiee=creds[credsl.find("cookie")+8:credsl.find("'",credsl.find('cookie')+9)]
+    headers = CaseInsensitiveDict()
+    headers["Pragma"] = "no-cache"
+    headers["Accept"] = "application/json, text/javascript, */*; q=0.01"
+    headers["Accept-Language"] = "en-GB,en;q=0.9"
+    headers["Accept-Encoding"] = "gzip, deflate, br"
+    headers["Cache-Control"] = "no-cache"
+    headers["Host"] = "www.codechef.com"
+    headers["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Safari/605.1.15"
+    headers["Connection"] = "keep-alive"
+    headers["Referer"] = contUrl
+    headers["Cookie"] = cookiee
+    headers["X-Requested-With"] = "XMLHttpRequest"
+    headers["x-csrf-token"] = "2afb417ca5f7ff3149bf011645361b4c9656189c14831fc98a8c406090bc6ba2"
+    response=requests.get("https://www.codechef.com/api/contests/"+contestCode,headers=headers).content
+    response=json.loads(response)
+    contestName=response["name"]
+    totalProblems=0
+    solvedProblems=0
+    print("Contest name : ",contestName)
+    problems={}
+    for item in response["problems"]:
+        totalProblems+=1
+        problems[item]=[response["problems"][item]["name"]]
+        problems[item]+=[contUrl+response["problems"][item]["problem_url"]]
+        problems[item]+=["Unattempted"]
+    for item in response["problemsstats"]["attempted"]:
+        problems[item][2]="Failed"
+    for item in response["problemsstats"]["partially_solved"]:
+        problems[item][2]="Partially Solved"
+    for item in response["problemsstats"]["solved"]:
+        solvedProblems+=1
+        problems[item][2]="Solved"
+    response=requests.get(url,headers=headers).content
+    response=json.loads(response)
+    totalparticipants=response["totalItems"]
+    myrank=response["rank_and_score"]["rank"]
+    finalresult=""
+    finalresult+="# CODECHEF CONTEST "+contestCode+"\n\n"
+    finalresult+="## "+contestName+'\n\n'
+    finalresult+="**Contest link:** "+contUrl+"\n\n"
+    finalresult+="**Standing:** **"+str(myrank)+"** out of **"+str(totalparticipants)+"** participants\n\n"
+    finalresult+="**Status:** Solved **"+str(solvedProblems)+"** out of **"+str(totalProblems)+"** problems\n\n"
+    finalresult+="## PROBLEMS\n\n"
+    for item in problems:
+        finalresult+="- ["
+        finalresult+='x' if problems[item][2]=="Solved" else ' '
+        finalresult+="] **"+item+" : "+problems[item][0]+"**\n\n"
+        finalresult+="> LINK : "+problems[item][1]+"\n"
+        finalresult+='>\n'
+        finalresult+=">STATUS : **"+problems[item][2]+"**\n\n"
+
+    return(finalresult)
+
+
 def getCodeforcesResponse(contUrl):
     creds=open('Configuration/codeforcesRequest.txt','r').read()
     useragent=creds[creds.find("user-agent")+12:creds.find("'",creds.find('user-agent')+13)]
