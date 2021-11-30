@@ -65,7 +65,7 @@ def getCodeforcesResponse(contUrl):
     finalresult+="## PROBLEMS\n\n"
     for item in problemlist:
         finalresult+="- ["
-        finalresult+='x' if item[0]=="Solved" else '-'
+        finalresult+='x' if item[0]=="Solved" else ' '
         finalresult+="] **"+item[2]+" : "+item[3]+"**\n\n"
         finalresult+="> LINK : "+item[1]+"\n"
         finalresult+='>\n'

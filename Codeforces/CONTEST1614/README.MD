@@ -4,7 +4,7 @@
 
 **Contest link:** https://codeforces.com/contest/1614
 
-**Standing:** **7064** out of **17617** participants
+**Standing:** **7064** out of **17751** participants
 
 **Status:** Solved **2** out of **6** problems
 
@@ -22,25 +22,25 @@
 >
 >STATUS : **Solved**
 
-- [-] **C : Divan and bitwise operations**
+- [ ] **C : Divan and bitwise operations**
 
 > LINK : https://codeforces.com/contest/1614/problem/C
 >
 >STATUS : **Rejected**
 
-- [-] **D1 : Divan and Kostomuksha (easy version)**
+- [ ] **D1 : Divan and Kostomuksha (easy version)**
 
 > LINK : https://codeforces.com/contest/1614/problem/D1
 >
 >STATUS : **Unattempted**
 
-- [-] **D2 : Divan and Kostomuksha (hard version)**
+- [ ] **D2 : Divan and Kostomuksha (hard version)**
 
 > LINK : https://codeforces.com/contest/1614/problem/D2
 >
 >STATUS : **Unattempted**
 
-- [-] **E : Divan and a Cottage**
+- [ ] **E : Divan and a Cottage**
 
 > LINK : https://codeforces.com/contest/1614/problem/E
 >

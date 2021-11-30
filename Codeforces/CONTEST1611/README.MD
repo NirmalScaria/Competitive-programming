@@ -4,7 +4,7 @@
 
 **Contest link:** https://codeforces.com/contest/1611
 
-**Standing:** **8880** out of **25529** participants
+**Standing:** **8880** out of **25655** participants
 
 **Status:** Solved **2** out of **8** problems
 
@@ -22,37 +22,37 @@
 >
 >STATUS : **Solved**
 
-- [-] **C : Polycarp Recovers the Permutation**
+- [ ] **C : Polycarp Recovers the Permutation**
 
 > LINK : https://codeforces.com/contest/1611/problem/C
 >
 >STATUS : **Rejected**
 
-- [-] **D : Weights Assignment For Tree Edges**
+- [ ] **D : Weights Assignment For Tree Edges**
 
 > LINK : https://codeforces.com/contest/1611/problem/D
 >
 >STATUS : **Unattempted**
 
-- [-] **E1 : Escape The Maze (easy version)**
+- [ ] **E1 : Escape The Maze (easy version)**
 
 > LINK : https://codeforces.com/contest/1611/problem/E1
 >
 >STATUS : **Unattempted**
 
-- [-] **E2 : Escape The Maze (hard version)**
+- [ ] **E2 : Escape The Maze (hard version)**
 
 > LINK : https://codeforces.com/contest/1611/problem/E2
 >
 >STATUS : **Unattempted**
 
-- [-] **F : ATM and Students**
+- [ ] **F : ATM and Students**
 
 > LINK : https://codeforces.com/contest/1611/problem/F
 >
 >STATUS : **Unattempted**
 
-- [-] **G : Robot and Candies**
+- [ ] **G : Robot and Candies**
 
 > LINK : https://codeforces.com/contest/1611/problem/G
 >

@@ -4,7 +4,7 @@
 
 **Contest link:** https://codeforces.com/contest/1609
 
-**Standing:** **3803** out of **12431** participants
+**Standing:** **3803** out of **12636** participants
 
 **Status:** Solved **2** out of **8** problems
 
@@ -22,37 +22,37 @@
 >
 >STATUS : **Solved**
 
-- [-] **C : Complex Market Analysis**
+- [ ] **C : Complex Market Analysis**
 
 > LINK : https://codeforces.com/contest/1609/problem/C
 >
 >STATUS : **Rejected**
 
-- [-] **D : Social Network**
+- [ ] **D : Social Network**
 
 > LINK : https://codeforces.com/contest/1609/problem/D
 >
 >STATUS : **Unattempted**
 
-- [-] **E : William The Oblivious **
+- [ ] **E : William The Oblivious **
 
 > LINK : https://codeforces.com/contest/1609/problem/E
 >
 >STATUS : **Unattempted**
 
-- [-] **F : Interesting Sections**
+- [ ] **F : Interesting Sections**
 
 > LINK : https://codeforces.com/contest/1609/problem/F
 >
 >STATUS : **Unattempted**
 
-- [-] **G : A Stroll Around the Matrix**
+- [ ] **G : A Stroll Around the Matrix**
 
 > LINK : https://codeforces.com/contest/1609/problem/G
 >
 >STATUS : **Unattempted**
 
-- [-] **H : Pushing Robots**
+- [ ] **H : Pushing Robots**
 
 > LINK : https://codeforces.com/contest/1609/problem/H
 >
