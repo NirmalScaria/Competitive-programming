@@ -69,7 +69,7 @@ def getCodeforcesResponse(contUrl):
         finalresult+="] **"+item[2]+" : "+item[3]+"**\n\n"
         finalresult+="> LINK : "+item[1]+"\n"
         finalresult+='>\n'
-        finalresult+="STATUS : **"+item[0]+"**\n\n"
+        finalresult+=">STATUS : **"+item[0]+"**\n\n"
 
     return(finalresult)
     # print("My rank:",myrank)

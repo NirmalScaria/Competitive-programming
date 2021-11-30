@@ -14,47 +14,47 @@
 
 > LINK : https://codeforces.com/contest/1609/problem/A
 >
-STATUS : **Solved**
+>STATUS : **Solved**
 
 - [x] **B : William the Vigilant**
 
 > LINK : https://codeforces.com/contest/1609/problem/B
 >
-STATUS : **Solved**
+>STATUS : **Solved**
 
 - [-] **C : Complex Market Analysis**
 
 > LINK : https://codeforces.com/contest/1609/problem/C
 >
-STATUS : **Rejected**
+>STATUS : **Rejected**
 
 - [-] **D : Social Network**
 
 > LINK : https://codeforces.com/contest/1609/problem/D
 >
-STATUS : **Unattempted**
+>STATUS : **Unattempted**
 
 - [-] **E : William The Oblivious **
 
 > LINK : https://codeforces.com/contest/1609/problem/E
 >
-STATUS : **Unattempted**
+>STATUS : **Unattempted**
 
 - [-] **F : Interesting Sections**
 
 > LINK : https://codeforces.com/contest/1609/problem/F
 >
-STATUS : **Unattempted**
+>STATUS : **Unattempted**
 
 - [-] **G : A Stroll Around the Matrix**
 
 > LINK : https://codeforces.com/contest/1609/problem/G
 >
-STATUS : **Unattempted**
+>STATUS : **Unattempted**
 
 - [-] **H : Pushing Robots**
 
 > LINK : https://codeforces.com/contest/1609/problem/H
 >
-STATUS : **Unattempted**
+>STATUS : **Unattempted**
 
