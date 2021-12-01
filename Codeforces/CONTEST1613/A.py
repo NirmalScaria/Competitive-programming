@@ -1,0 +1,41 @@
+t=int(input())
+for _ in range(t):
+    x1,p1=input().split()
+    x2,p2=input().split()
+    p1=int(p1)
+    p2=int(p2)
+    l1=p1+len(x1)
+    l2=p2+len(x2)
+    i=j=0
+    if(l1>l2):
+        print(">")
+    elif(l2>l1):
+        print("<")
+    else:
+        while(True):
+            if(i>=len(x1) and j>=len(x2)):
+                print("=")
+                break
+            elif(i>=len(x1)):
+                if(x2[j]=='0'):
+                    i+=1
+                    j+=1
+                else:
+                    print("<")
+                    break
+            elif(j>=len(x2)):
+                if(x1[i]=='0'):
+                    i+=1
+                    j+=1
+                else:
+                    print(">")
+                    break
+            elif(x1[i]<x2[j]):
+                print("<")
+                break
+            elif(x1[i]>x2[j]):
+                print(">")
+                break
+            else:
+                i+=1
+                j+=1
