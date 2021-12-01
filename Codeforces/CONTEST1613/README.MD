@@ -4,7 +4,7 @@
 
 **Contest link:** https://codeforces.com/contest/1613
 
-**Standing:** **-** out of **13829** participants
+**Standing:** **5700** out of **13829** participants
 
 **Status:** Solved **2** out of **6** problems
 
