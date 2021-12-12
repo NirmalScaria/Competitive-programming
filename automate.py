@@ -23,10 +23,10 @@ elif(contesturl.find("codechef.com")!=-1):
         print("Please generate a copy of Curl request to codechefRequest.txt and retry")
         exit()
     readmedata=Responder.getCodechefResponse(contesturl)
-    # pathurl="Codechef/"+contesturl.split("/")[-1]+"/README.MD"
-    # f=open(pathurl,"w")
-    # f.write(readmedata)
-    # f.close()
+    pathurl="Codechef/"+contesturl.split("/")[-1]+"/README.MD"
+    f=open(pathurl,"w")
+    f.write(readmedata)
+    f.close()
 else:
     print("Invalid URL")
     exit()

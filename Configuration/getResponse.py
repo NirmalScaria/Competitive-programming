@@ -9,7 +9,7 @@ def getCodechefResponse(contUrl):
     contestCode=contUrl.split('/')[-1]
     print("Fetching Codechef Results")
     credsl=creds.lower()
-    url = "https://www.codechef.com/api/rankings/"+contestCode+"?sortBy=rank&order=asc&page=189&itemsPerPage=25"
+    url = "https://www.codechef.com/api/rankings/"+contestCode+"?sortBy=rank&order=asc&page=1&itemsPerPage=25"
     useragent=creds[credsl.find("user-agent")+12:credsl.find("'",credsl.find('user-agent')+13)]
     cookiee=creds[credsl.find("cookie")+8:credsl.find("'",credsl.find('cookie')+9)]
     headers = CaseInsensitiveDict()
@@ -27,11 +27,14 @@ def getCodechefResponse(contUrl):
     headers["x-csrf-token"] = "2afb417ca5f7ff3149bf011645361b4c9656189c14831fc98a8c406090bc6ba2"
     response=requests.get("https://www.codechef.com/api/contests/"+contestCode,headers=headers).content
     response=json.loads(response)
+    print(response["problemsstats"])
     contestName=response["name"]
     totalProblems=0
     solvedProblems=0
     print("Contest name : ",contestName)
     problems={}
+    print("Number of problems : ",len(response["problems"]))
+    print("Succesful problems are : ",response["problemsstats"]["solved"])
     for item in response["problems"]:
         totalProblems+=1
         problems[item]=[response["problems"][item]["name"]]
@@ -44,10 +47,19 @@ def getCodechefResponse(contUrl):
     for item in response["problemsstats"]["solved"]:
         solvedProblems+=1
         problems[item][2]="Solved"
+    print(problems)
     response=requests.get(url,headers=headers).content
     response=json.loads(response)
-    totalparticipants=response["totalItems"]
-    myrank=response["rank_and_score"]["rank"]
+    if("totalItems" not in response):
+        print("Enter total number of participants.\n> ")
+        totalparticipants=int(input())
+    else:
+        totalparticipants=response["totalItems"]
+    if("rank_and_score" not in response):
+        print("Enter your rank.\n> ",end="")
+        myrank=int(input())
+    else:
+        myrank=response["rank_and_score"]["rank"]
     finalresult=""
     finalresult+="# CODECHEF CONTEST "+contestCode+"\n\n"
     finalresult+="## "+contestName+'\n\n'
@@ -62,7 +74,7 @@ def getCodechefResponse(contUrl):
         finalresult+="> LINK : "+problems[item][1]+"\n"
         finalresult+='>\n'
         finalresult+=">STATUS : **"+problems[item][2]+"**\n\n"
-
+    # print(finalresult)
     return(finalresult)
 
 
