@@ -12,14 +12,23 @@ using namespace std;
 #define vvll vector<vector<long long>>
 #define pb push_back
 void solve(){
-
+    ull n,k;
+    cin>>n>>k;
+    if(k<=(n+1)/2){
+        cout<< (k-1) * 2 +1;
+        return;
+    }
+    else{
+        cout<< (k-(n+1)/2 ) * 2 ;
+        return;
+    }
     
 }
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int t=1;
-    cin>>t;
+    // cin>>t;
     while(t--){
         solve();
     }

@@ -12,8 +12,7 @@ using namespace std;
 #define vvll vector<vector<long long>>
 #define pb push_back
 void solve(){
-
-    
+  
 }
 int main() {
     ios_base::sync_with_stdio(0);

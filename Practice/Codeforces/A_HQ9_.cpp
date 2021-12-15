@@ -12,14 +12,22 @@ using namespace std;
 #define vvll vector<vector<long long>>
 #define pb push_back
 void solve(){
-
-    
+    string inp;
+    cin>>inp;
+    for(int i=0; i<inp.length(); i++){
+        if(inp[i]=='H' || inp[i]=='Q' || inp[i]=='9' ){
+            cout<<"YES"<<endl;
+            return;
+        }
+    }
+    cout<<"NO"<<endl;
+    return;
 }
 int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0); cout.tie(0);
     int t=1;
-    cin>>t;
+    // cin>>t;
     while(t--){
         solve();
     }
