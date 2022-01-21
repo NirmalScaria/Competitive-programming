@@ -81,7 +81,8 @@ def getCodechefResponse(contUrl):
 def getCodeforcesResponse(contUrl):
     creds=open('Configuration/codeforcesRequest.txt','r').read()
     useragent=creds[creds.find("user-agent")+12:creds.find("'",creds.find('user-agent')+13)]
-    cookie=creds[creds.find("cookie")+8:creds.find("'",creds.find('cookie')+9)]
+    cookie=creds[creds.find("Cookie")+8:creds.find("'",creds.find('cookie')+9)]
+    print('cookie:',cookie)
     print("Fetching Codeforces data ")
     headers = {
     'authority': 'codeforces.com',
